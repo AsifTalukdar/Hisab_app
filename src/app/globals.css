@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --green: #00875A;
+  --green-light: #E3F5EE;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans Bengali', sans-serif;
+}
