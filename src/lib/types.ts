@@ -4,6 +4,7 @@ export type Profile = {
   phone: string | null;
   logo_url: string | null;
   address: string | null;
+  bkash_number: string | null;
   created_at: string;
 };
 

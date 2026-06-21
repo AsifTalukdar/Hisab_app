@@ -94,7 +94,7 @@ export default async function DashboardPage() {
                 {all.slice(0, 8).map(inv => (
                   <tr key={inv.id} className="border-t border-gray-50 hover:bg-gray-50/50 transition-colors">
                     <td className="px-6 py-4 font-semibold text-gray-800">
-                      <Link href={`/invoices/${inv.id}`} className="hover:text-[#00875A]">{inv.invoice_number}</Link>
+                      <Link href={`/dashboard/invoices/${inv.id}`} className="hover:text-[#00875A]">{inv.invoice_number}</Link>
                     </td>
                     <td className="px-6 py-4 text-gray-600">{(inv.clients as any)?.name ?? "—"}</td>
                     <td className="px-6 py-4 text-gray-500">{inv.issue_date}</td>

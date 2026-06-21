@@ -38,7 +38,7 @@ export default async function InvoicesPage() {
           <h1 className="text-xl font-bold text-gray-900">Invoices</h1>
           <p className="text-sm text-gray-400 mt-0.5">{all.length} total</p>
         </div>
-        <Link href="/invoices/new" className="bg-[#00875A] text-white text-sm font-semibold px-4 py-2 rounded-lg hover:brightness-105 transition">
+        <Link href="/dashboard/invoices/new" className="bg-[#00875A] text-white text-sm font-semibold px-4 py-2 rounded-lg hover:brightness-105 transition">
           ＋ New Invoice
         </Link>
       </div>
@@ -48,7 +48,7 @@ export default async function InvoicesPage() {
           <div className="flex flex-col items-center justify-center py-20 text-gray-400">
             <div className="text-4xl mb-3">🧾</div>
             <div className="font-medium text-gray-600 mb-1">No invoices yet</div>
-            <Link href="/invoices/new" className="mt-4 bg-[#00875A] text-white text-sm font-semibold px-4 py-2 rounded-lg">
+            <Link href="/dashboard/invoices/new" className="mt-4 bg-[#00875A] text-white text-sm font-semibold px-4 py-2 rounded-lg">
               Create first invoice
             </Link>
           </div>
@@ -72,7 +72,7 @@ export default async function InvoicesPage() {
                     <td className="px-6 py-4 font-semibold">৳{Number(inv.total).toLocaleString()}</td>
                     <td className="px-6 py-4"><StatusBadge status={inv.status} /></td>
                     <td className="px-6 py-4">
-                      <Link href={`/invoices/${inv.id}`} className="text-xs text-[#00875A] font-medium hover:underline">View</Link>
+                      <Link href={`/dashboard/invoices/${inv.id}`} className="text-xs text-[#00875A] font-medium hover:underline">View</Link>
                     </td>
                   </tr>
                 ))}

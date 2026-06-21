@@ -13,17 +13,19 @@ export default function LoginPage() {
   const supabase = createClient();
 
   async function sendOtp() {
-  setLoading(true); setError("");
-  const { error } = await supabase.auth.signInWithOtp({ 
-    email,
-    options: {
-      shouldCreateUser: true,
-    }
-  });
-  if (error) setError(error.message);
-  else setStep("otp");
-  setLoading(false);
-}
+    setLoading(true); setError("");
+    const { error } = await supabase.auth.signInWithOtp({ 
+      email,
+      options: {
+        shouldCreateUser: true,
+        emailRedirectTo: `${window.location.origin}/auth/callback`,
+      }
+    });
+    if (error) setError(error.message);
+    else setStep("otp");
+    setLoading(false);
+  }
+
 
   async function verifyOtp() {
     setLoading(true); setError("");

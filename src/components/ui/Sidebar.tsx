@@ -44,9 +44,9 @@ export default function Sidebar() {
       </div>
       <div className="px-3 border-t border-gray-100 pt-3 mt-3">
         <Link
-          href="/settings"
+          href="/dashboard/settings"
           className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors mb-1 ${
-            pathname === "/settings" ? "bg-[#E3F5EE] text-[#00875A]" : "text-gray-600 hover:bg-gray-50"
+            pathname === "/dashboard/settings" ? "bg-[#E3F5EE] text-[#00875A]" : "text-gray-600 hover:bg-gray-50"
           }`}
         >
           <span>⚙️</span> Settings
