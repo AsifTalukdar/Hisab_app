@@ -32,7 +32,7 @@ export default async function DashboardPage() {
 
   const all = (invoices ?? []) as Invoice[];
   const totalRevenue = all.filter(i => i.status === "paid").reduce((s, i) => s + Number(i.total), 0);
-  const pending = all.filter(i => i.status === "sent" || i.status === "pending");
+  const pending = all.filter(i => i.status === "sent");
   const overdue = all.filter(i => i.status === "overdue");
   const pendingAmt = pending.reduce((s, i) => s + Number(i.total), 0);
   const overdueAmt = overdue.reduce((s, i) => s + Number(i.total), 0);
