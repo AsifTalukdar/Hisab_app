@@ -1,4 +1,5 @@
 
+
 "use client";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
@@ -19,13 +20,12 @@ export default function LoginPage() {
       email,
       options: {
         shouldCreateUser: true,
-      }
+              }
     });
     if (error) setError(error.message);
     else setStep("otp");
     setLoading(false);
   }
-
 
   async function verifyOtp() {
     setLoading(true); setError("");
